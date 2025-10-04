@@ -1,0 +1,38 @@
+{
+  "name": "superui-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SuperUI MCP Server - Simple UI component tool for MCP",
+  "main": "dist/index.js",
+  "bin": {
+    "superui-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ui",
+    "component",
+    "shadcn",
+    "react"
+  ],
+  "author": "SuperUI Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
