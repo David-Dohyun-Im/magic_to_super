@@ -1,0 +1,41 @@
+{
+  "name": "superui-api-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SuperUI API Server - Backend service for UI component management",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "api",
+    "server",
+    "ui",
+    "component",
+    "shadcn",
+    "react",
+    "express"
+  ],
+  "author": "SuperUI Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
