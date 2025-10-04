@@ -4,6 +4,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
 import { GetComponentTool } from "./tools/get-component.js";
+import { GetTemplateTool } from "./tools/get-template.js";
 import { config, logConfig } from "./utils/config.js";
 
 const VERSION = "1.0.0";
@@ -14,6 +15,7 @@ const server = new McpServer({
 
 // Register tools
 new GetComponentTool().register(server);
+new GetTemplateTool().register(server);
 
 async function runServer() {
   const transport = new StdioServerTransport();
@@ -79,7 +81,7 @@ async function runServer() {
   try {
     await server.connect(transport);
     console.log(`✅ SuperUI MCP Server started successfully (PID: ${process.pid})`);
-    console.log(`🔧 Available tools: get_component`);
+    console.log(`🔧 Available tools: get_component, get_template`);
   } catch (error) {
     console.error(`💥 Fatal error starting server (PID: ${process.pid}):`, error);
     process.exit(1);
